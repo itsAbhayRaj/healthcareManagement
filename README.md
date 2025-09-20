@@ -73,33 +73,6 @@ A Django REST Framework API for managing healthcare data with JWT authentication
    python manage.py runserver
    ```
 
-## 🌐 Deployment
-
-This project is ready for deployment on various platforms:
-
-### Railway (Recommended)
-1. Go to [railway.app](https://railway.app)
-2. Connect your GitHub repository
-3. Add PostgreSQL database
-4. Set environment variables
-5. Deploy!
-
-### Render
-1. Go to [render.com](https://render.com)
-2. Create new Web Service
-3. Connect your repository
-4. Add PostgreSQL database
-5. Deploy!
-
-### Heroku
-1. Install Heroku CLI
-2. Create Heroku app
-3. Add PostgreSQL addon
-4. Set environment variables
-5. Deploy!
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
-
 ## 🧪 Testing the API
 
 ### 1. Register a user
@@ -113,22 +86,6 @@ curl -X POST https://your-api.railway.app/api/auth/register/ \
     "password": "password123",
     "password_confirm": "password123"
   }'
-```
-
-### 2. Login
-```bash
-curl -X POST https://your-api.railway.app/api/auth/login/ \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "test@example.com",
-    "password": "password123"
-  }'
-```
-
-### 3. Use the API
-```bash
-curl -X GET https://your-api.railway.app/api/patients/ \
-  -H "Authorization: Bearer <your-access-token>"
 ```
 
 ## 🔒 Security
@@ -152,27 +109,3 @@ healthcare/
 ├── Procfile          # Deployment configuration
 └── README.md         # This file
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-If you encounter any issues, please:
-1. Check the [DEPLOYMENT.md](DEPLOYMENT.md) guide
-2. Review the error logs
-3. Create an issue on GitHub
-
----
-
-**Happy coding! 🎉**
-
