@@ -28,12 +28,10 @@ class PatientViewSet(viewsets.ModelViewSet):
     def destroy(self, request, *args, **kwargs):
         """Override destroy to ensure proper deletion."""
         try:
-            # Get the patient ID from URL parameters
             patient_id = kwargs.get('pk')
             
-            # Try to get the patient
             try:
-                print("hello")
+                # print("hello")
                 instance = self.get_object()
             except Exception as e:
                 return Response(
@@ -44,8 +42,8 @@ class PatientViewSet(viewsets.ModelViewSet):
                     }, 
                     status=status.HTTP_404_NOT_FOUND
                 )
-            print("hello")
-            # Store patient info before deletion
+            # print("hello")
+
             patient_id = instance.id
             patient_name = instance.name
             
